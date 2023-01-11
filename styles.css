@@ -6,9 +6,14 @@
   letter-spacing: 3px;
   font-weight: bolder;
 }
+html,
+body {
+  background-color: var(--west);
+}
 :root {
   --west: rgb(255, 215, 35);
   --wild: rgb(105, 27, 27);
+  --error-message: rgb(64, 64, 64);
 }
 /* smokum-regular - latin */
 @font-face {
@@ -26,15 +31,14 @@
     /* Safari, Android, iOS */ url("fonts/smokum-v24-latin-regular.svg#Smokum")
       format("svg"); /* Legacy iOS */
 }
-body {
-  background-color: var(--west);
-}
+/* MAIN STYLES */
 aside {
   display: block;
   position: fixed;
   width: 40vw;
   height: 100%;
   background-image: url("images/clint.jpg");
+  background-size: cover;
   border-right: 5px solid var(--wild);
 }
 main {
@@ -46,6 +50,9 @@ h1,
   font-size: larger;
   font-size: 2rem;
   margin-bottom: 15px;
+}
+.ww {
+  color: var(--wild);
 }
 .form-intro {
   padding: 10% 10% 5% 5%;
@@ -75,6 +82,7 @@ input {
   padding: 2.5px;
 }
 button {
+  background-color: rgb(212, 255, 241);
   padding: 24px;
   color: var(--wild);
   font-size: 1.5rem;
@@ -88,6 +96,7 @@ button {
   color: brown;
   font-size: larger;
 }
+/* RESPONSIVE */
 @media only screen and (max-width: 800px) {
   * {
     font-size: 1rem;
@@ -118,4 +127,26 @@ button {
   main {
     margin-left: 25vw;
   }
+}
+/* FORM-ASSISTANCE */
+.error-message {
+  display: none;
+}
+input:not(:focus):not(:placeholder-shown):invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--error-message);
+  font-size: 1rem;
+}
+input:not(:focus):not(:placeholder-shown):valid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid green;
+  border-radius: 5px;
 }
