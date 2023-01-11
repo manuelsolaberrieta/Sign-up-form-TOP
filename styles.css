@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Smokum";
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  font-weight: bolder;
+}
+:root {
+  --west: rgb(255, 215, 35);
+  --wild: rgb(105, 27, 27);
+}
+/* smokum-regular - latin */
+@font-face {
+  font-family: "Smokum";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/smokum-v24-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("fonts/smokum-v24-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/smokum-v24-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("fonts/smokum-v24-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("fonts/smokum-v24-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("fonts/smokum-v24-latin-regular.svg#Smokum")
+      format("svg"); /* Legacy iOS */
+}
+body {
+  background-color: var(--west);
+}
+aside {
+  display: block;
+  position: fixed;
+  width: 40vw;
+  height: 100%;
+  background-image: url("images/clint.jpg");
+  border-right: 5px solid var(--wild);
+}
+main {
+  margin-left: 40vw;
+  background-color: var(--west);
+}
+h1,
+.ww {
+  font-size: larger;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.form-intro {
+  padding: 10% 10% 5% 5%;
+}
+.form-body {
+  padding: 0 5%;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+label {
+  display: block;
+}
+input,
+.form-submit {
+  width: 100%;
+}
+.form-input {
+  flex-basis: 40%;
+  margin-right: 50px;
+}
+.form-submit {
+  margin: 50px 0;
+}
+input {
+  padding: 2.5px;
+}
+button {
+  padding: 24px;
+  color: var(--wild);
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+.login {
+  margin-top: 40px;
+}
+.login a {
+  text-decoration: none;
+  color: brown;
+  font-size: larger;
+}
+@media only screen and (max-width: 800px) {
+  * {
+    font-size: 1rem;
+  }
+  .ww {
+    font-size: larger;
+  }
+  h1 {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .form-input {
+    margin: 5px;
+    flex-basis: 100%;
+    margin-right: 20px;
+  }
+  .form-body {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .form-submit,
+  .login {
+    margin: 5px;
+  }
+  aside {
+    width: 25vw;
+  }
+  main {
+    margin-left: 25vw;
+  }
+}

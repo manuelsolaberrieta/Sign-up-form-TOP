@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside>
+      <figure class="web-icon"></figure>
+    </aside>
+    <main>
+      <section class="form-intro">
+        <h1>
+          Come on over to have the greatest time of your life in this here
+          wonderful place. <span class="ww">The Wild West!</span>
+        </h1>
+        <p>
+          Meet all your childhood heroes, shoot barrels, throw dinamite and ride
+          horses. We'll be waiting for you!
+        </p>
+      </section>
+      <section class="form-body">
+        <form action="#" method="post">
+          <div class="form-input">
+            <label for="name">FIRST NAME</label
+            ><input type="text" id="name" name="name" requiered minlength="3" />
+          </div>
+          <div class="form-input">
+            <label for="last-name">LAST NAME (optional)</label
+            ><input type="text" id="last-name" name="last-name" />
+          </div>
+          <div class="form-input">
+            <label for="email">EMAIL</label
+            ><input type="email" id="email" name="email" requiered />
+          </div>
+          <div class="form-input">
+            <label for="phone">PHONE NUMBER (optional)</label
+            ><input
+              type="tel"
+              id="phone"
+              name="phone"
+              inputmode="numeric"
+              pattern="[0-9]{10,13}"
+            />
+          </div>
+          <div class="form-input">
+            <label for="password">PASSWORD</label
+            ><input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="new-password"
+              required
+              minlength="8"
+              maxlength="20"
+            />
+          </div>
+          <div class="form-input">
+            <label for="password-confirm">CONFIRM PASSWORD</label
+            ><input
+              type="password"
+              id="password-confirm"
+              name="password-confirm"
+              autocomplete="new-password"
+              required
+              minlength="8"
+              maxlength="20"
+            />
+          </div>
+          <section class="form-submit">
+            <button type="submit">SHOOT</button>
+            <p class="login">Already have an account? <a href="#">Log in</a></p>
+          </section>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
